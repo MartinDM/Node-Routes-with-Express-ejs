@@ -8,7 +8,7 @@ var readme = fs.readFileSync('readme.txt', 'utf-8');
 fs.writeFileSync('newReadme.txt', readme += ' newer stuff')
 
 // Asyncronous methods. Won't block!
-fs.readFile( 'readme.txt', 'utf-8', function(err, data){ 
+fs.readFile( 'node-readme.txt', 'utf-8', function(err, data){ 
     fs.writeFile( 'newReadme.txt', data, () => console.log('done') )
 });
 
