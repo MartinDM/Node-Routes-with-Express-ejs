@@ -1,0 +1,31 @@
+html, body {
+    transition: all .4s ease-in;
+    font-family: verdana, sans-serif;
+    color: #fff;
+    text-align: center;
+    background: skyblue;
+}
+
+form, input, label {
+    width: 100%;
+    display: block;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+input {
+    margin: 6px auto;
+    border: 0;
+    outline: none;
+    display: block;
+    max-width: 50%;
+}
+
+input[type="submit"] {
+    width: 100px;
+    color: #333;
+    padding: 6px 12px;
+}
