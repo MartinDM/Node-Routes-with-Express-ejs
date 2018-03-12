@@ -1,9 +1,15 @@
-html, body {
+body {
     transition: all .4s ease-in;
+    height: 100vh;
     font-family: verdana, sans-serif;
     color: #fff;
     text-align: center;
     background: skyblue;
+    background: rgb(135,206,235);
+    background: -moz-linear-gradient(-45deg, rgba(135,206,235,1) 0%, rgba(177,220,237,1) 100%);
+    background: -webkit-linear-gradient(-45deg, rgba(135,206,235,1) 0%,rgba(177,220,237,1) 100%);
+    background: linear-gradient(135deg, rgba(135,206,235,1) 0%,rgba(177,220,237,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87ceeb', endColorstr='#b1dced',GradientType=1 );
 }
 
 form, input, label {
@@ -62,8 +68,9 @@ h1 .small {
 /* Hobbies component */
 
 .hobbies, .tips {
-    padding: 12px;
-    background: #95daf6;
+    padding: 12px; 
+    border: 1px solid #c8eefc;
+    border-radius: 3px;
     color: #fff;
     width: 400px;
     max-width: 100%;
