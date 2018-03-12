@@ -7,7 +7,7 @@ var glob = require("glob")
 //fs.unlink('');
 // Creating/removing directories
 
-// Synchronously make and rmeove directories
+// Synchronously make and remove directories
 //fs.mkdirSync('people');
 //fs.rmdirSync('people');
 
@@ -23,7 +23,7 @@ var Person = function(name, age, id){
 var martin = new Person('Martin', '28', 01);
 // var jane = new Person('Jane', '30', 02);
 // var baz = new Person('Baz', '35', 03);
-var people = [  martin ];
+var people = [ martin ];
 
 const directory = './people/';
     

@@ -12,7 +12,7 @@ var server = http.createServer(
         res.writeHead(200, {'Content-Type': 'application/json'})
 
         var martinObj = {
-            name: 'Ryu',
+            name: 'Martin',
             job: 'Ninja',
             age: '30',
             skill: 'Krav maga'

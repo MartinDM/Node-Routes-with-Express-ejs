@@ -1,35 +1,27 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Contact</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="./assets/style.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <% include partials/nav.ejs %>
+        <%-  include('./partials/head.ejs', {title: 'Contact'} ) %> 
+    
+        <div class="container">
+    
+            <% include partials/nav.ejs %>
 
-        <h1>Contact us</h1>
+            <h1>Contact me</h1>
+            <div class="tips">
+                <p class="pre-fill"><a href="/contact?name=Martin&dept=Sales&contact=John&email=hello@martindm.uk">Click to pre-fill the form via query strings</a></p>
+                <p>...then submit it to pass the data on</p> 
+            </div>
+         
+            <form action="" class="contact-form" id="contact-form" method="POST" action="/contact">
+                <label for="yourname">Your first name</label>
+                <input type="text" name="yourname" value="<%=qs.name %>">
+                <label for="who">Who do you want to contact?</label>
+                <input type="text" name="who" value="<%=qs.contact %>">
+                <label for="dept">Which department?</label>
+                <input type="text" name="department" value="<%=qs.dept %>">
+                <label for="email">Your email</label>
+                <input type="email" name="email" value="<%=qs.email %>">
+                <input type="submit" value="submit">
+            </form> 
         
-        <form action="" id="contact-form" method="POST" action="/contact">
-            <label for="yourname">Your first name</label>
-            <input type="text" name="yourname" value="">
-            <label for="who">Who do you want to contact?</label>
-            <input type="text" name="who" value="<%=qs.name %>">
-            <label for="dept">Which department?</label>
-            <input type="text" name="department" value="<%=qs.dept %>">
-            <label for="email">Your email</label>
-            <input type="email" name="email">
-            <input type="submit" value="submit">
-        </form> 
-        
+        </div>
     </body>
 </html>

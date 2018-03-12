@@ -15,7 +15,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 // Routes
 // Respond to GET requests with route
-app.get('/home', function(req, res) {
+app.get('/', function(req, res) {
     //res.sendfile(__dirname + '/views/index.html')
     // res.writeHead(200, {'Content-Type':'text/html'}); 
     res.render('index')
@@ -36,7 +36,7 @@ app.post('/contact', urlencodedParser, function(req, res) {
 // Id is stored on the params of the req object
 app.get('/profile/:id', function(req,res) {
     var data = { person: req.params.id, age: 31, job: 'Ninja', food: 'Apples', hobbies: [ 'Running', 'Eating', 'Fighting', 'Singing' ]}
-    // Using a template
+    // Pass in data to the template
     res.render('profile', { data })
 });
 

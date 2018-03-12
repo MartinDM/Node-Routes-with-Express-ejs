@@ -1,33 +1,26 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Home</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="/assets/style.css" rel="stylesheet" type="text/css">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
-        <% include partials/nav.ejs %>
 
-        <h1><%= data.person %></h1> 
-        <p>Food: <%= data.food %> </p>
-        <p>Job: <%= data.job %> </p>
+        <%-  include('./partials/head.ejs', {title: 'Profile'} ) %> 
 
-        <h2>Hobbies</h2>
-        <ul>
-            <% data.hobbies.forEach( function(item) { %>
-               <li><%= item %></li> 
-            <% }); %>
-        </ul>
+        <div class="container">
         
+        <% include partials/nav.ejs %>
+        
+        <h1>
+        <span class="small">Profile of</span>
+        <%= data.person %>
+        </h1> 
+      
+        <div class="hobbies">
+            <h2 class="hobbies-title">Hobbies</h2>
+            <p>Items from an array passed in on the .get method for this url:</p>
+            <ul class="hobbies__list">
+                <% data.hobbies.forEach( function(item) { %>
+                <li class="hobbies__item"><%= item %></li> 
+                <% }); %>
+            </ul>
+        </div>
+        
+        </div>
     </body>
 </html>

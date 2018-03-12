@@ -29,3 +29,85 @@ input[type="submit"] {
     color: #333;
     padding: 6px 12px;
 }
+
+.container {
+    padding: 12px;
+    max-width: 1000px; 
+}
+
+h1 .small {
+    font-size: 55%;
+    display: block;
+    color: #215468;
+}
+
+.main-nav {
+    padding: 0;
+    list-style: none; 
+    margin: 24px 0 30px;
+}
+
+.main-nav__item {
+    font-weight: bold;
+    display: inline;
+    padding: 12px;
+    color: #fff;
+    font-size: 1.3em;
+}
+.main-nav__item a {
+    border-radius: 3px;
+    padding: 10px; 
+}
+
+/* Hobbies component */
+
+.hobbies, .tips {
+    padding: 12px;
+    background: #95daf6;
+    color: #fff;
+    width: 400px;
+    max-width: 100%;
+    margin: 2em auto;
+    border-radius: 8px;
+}
+
+.hobbies__item {
+    font-size: 1.2em;
+}
+
+.tips p {
+    font-size: 1.2em;
+    padding: 0 30px;
+}
+
+.hobbies p {
+    color: #215468;
+}
+
+.pre-fill {
+    text-decoration: underline;
+}
+
+.hobbies-title {
+    margin: 20px 0;
+}
+
+.hobbies__list {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1em;
+    list-style: none;
+}
+
+.contact-form input {
+    color: #333;
+    font-size: 15px;
+    padding: 4px 8px;
+    border: 3px solid #f0f0f0;
+    margin-bottom: 14px;
+}
+
+.contact-form input[type=submit] {
+    border: 0;
+    padding: 8px;
+} 
